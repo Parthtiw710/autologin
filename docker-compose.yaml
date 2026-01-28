@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   nextjs:
-    container_name: nextjs-bun-app
+    container_name: autologin
     build: .
     ports:
       - "3000:3000"
