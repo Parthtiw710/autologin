@@ -1,15 +1,16 @@
-FROM oven/bun:1.1.0
+FROM node:24
 
 WORKDIR /app
 
-COPY bun.lockb package.json ./
+COPY package.json ./
 
-RUN bun install
+RUN npm install
 
 COPY . .
 
-RUN bun run build
+RUN npm run build
 
 EXPOSE 3000
 
-CMD ["bun", "run", "start"]
+CMD ["npm", "run", "start"]
+
