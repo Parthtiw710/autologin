@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   nextjs:
     container_name: autologin
@@ -10,4 +8,5 @@ services:
       - .env
     environment:
       NODE_ENV: production
+      ENV_KEYS1: ${ENV_KEYS1}
     restart: unless-stopped
