@@ -3,10 +3,9 @@ services:
     container_name: autologin
     build: .
     ports:
-      - "3000:3000"
+      - "80:3000"
     env_file:
       - .env
     environment:
       NODE_ENV: production
-      ENV_KEYS1: ${ENV_KEYS1}
     restart: unless-stopped
